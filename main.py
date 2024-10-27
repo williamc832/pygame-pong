@@ -3,8 +3,12 @@ from game import Game
 
 # main function
 def main():
+    # create game object
     game = Game()
-    game.run()
+
+    # game loop
+    while game.running:
+        game.run()
 
 
 # call main function

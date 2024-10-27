@@ -11,16 +11,17 @@ class Paddle:
         self.rect = pygame.Rect(self.x, self.y, PADDLE_WIDTH, PADDLE_HEIGHT)
         self.color = pygame.Color(WHITE)
         self.v = PADDLE_SPEED
-        self.score = 0
+        self.drawing = True
 
-    # function for upward movement
+    # upward movement of paddle
     def move_up(self):
         self.rect.y -= self.v
 
-    # function for downward movement
+    # downward movement of paddle
     def move_down(self):
         self.rect.y += self.v
 
-    # update paddle object
+    # update paddle object until game over
     def update(self, win):
-        pygame.draw.rect(win, self.color, self.rect)
+        if self.drawing:
+            pygame.draw.rect(win, self.color, self.rect)

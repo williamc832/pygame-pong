@@ -22,10 +22,10 @@ class Ball:
 
     # randomize ball direction
     def randomize_direction(self):
-        # range of angles
-        angle_ranges = [(15, 60), (120, 165), (195, 240), (300, 315)]
-        range_choice = random.choice(angle_ranges)
-        self.angle = random.randint(*range_choice)
+        # randomly choose angle
+        angle_list = [(15, 60), (120, 165), (195, 240), (300, 345)]
+        angle_range = random.choice(angle_list)
+        self.angle = random.randint(*angle_range)
 
         # convert angle to radians
         angle_rad = math.radians(self.angle)
@@ -45,7 +45,7 @@ class Ball:
             self.rect.x += self.speed_x
             self.rect.y += self.speed_y
 
-    # update ball object
+    # update ball object before and after scoring
     def update(self, win):
         if self.moving:
             self._movement()

@@ -17,6 +17,10 @@ BALL_SPEED = 5
 BALL_MAX_SPEED = BALL_SPEED * 2
 
 # font types
-SCORE_FONT = "fonts/Atari-Dragonsi.ttf"
-TEXT_FONT = "fonts/Atari-Nc33.ttf"
-FONT_SIZE = 50
+SCORE_FONT = "fonts/pong-score.ttf"
+TEXT_FONT = "fonts/PressStart2P.ttf"
+TITLE_FONT = "fonts/atari-artdeco.ttf"
+SCORE_FONT_SIZE = 60
+GAME_OVER_FONT_SIZE = 40
+TEXT_FONT_SIZE = 30
+TITLE_FONT_SIZE = 100
