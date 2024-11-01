@@ -62,13 +62,13 @@ class Table:
                 self.ball.speed_x *= -1
         else:
             if self.ball.rect.left >= WIDTH and pygame.time.get_ticks() - self.score_time > self.RESET_DELAY:
-                self.p1_score += 11
+                self.p1_score += 1
                 self.score_time = pygame.time.get_ticks()
                 self._hide_ball()
                 self._reset_ball_speed()
                 self._check_score()
             if self.ball.rect.right <= 0 and pygame.time.get_ticks() - self.score_time > self.RESET_DELAY:
-                self.p2_score += 11
+                self.p2_score += 1
                 self.score_time = pygame.time.get_ticks()
                 self._hide_ball()
                 self._reset_ball_speed()
